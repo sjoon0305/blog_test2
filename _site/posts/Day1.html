@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="유성준">
+<meta name="dcterms.date" content="2024-01-03">
 
-<title>Quarto를 활용한 블로그 - About ME</title>
+<title>Quarto를 활용한 블로그 - 나의 블로그 만들기 도전기 Day1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,17 +104,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Quarto를 활용한 블로그</span>
     </a>
   </div>
@@ -88,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About ME</span></a>
   </li>  
   <li class="nav-item compact">
@@ -109,42 +146,145 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">나의 블로그 만들기 도전기 Day1</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Quarto</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>유성준 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 3, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About ME</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>About this blog</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
+
+
+
+<p><img src="quarto_ex.png" class="img-fluid"></p>
+<section id="github의-파일-수정하기" class="level2">
+<h2 class="anchored" data-anchor-id="github의-파일-수정하기">1. Github의 파일 수정하기</h2>
+<p>깃헙에서 gitprac 레지스토리 생성</p>
+<p><strong>1-1.윈도우 터미널에서 파일 수정</strong></p>
+<ul>
+<li><p>git clone https://github.com/sjoon0305/gitprac.git</p></li>
+<li><p>cd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.</p></li>
+<li><p>git config –global user.email “you@example.com”</p></li>
+<li><p>git config –global user.name “Your Name” # 이 두 코드로 나를 인식</p></li>
+<li><p>git add .</p></li>
+<li><p>git commit -m .</p></li>
+<li><p>git push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다</p></li>
+</ul>
+<p><strong>1-2. Github의 codespaces의 terminal에서 직접 수정</strong></p>
+<ul>
+<li>코드스페이스에서 파일을 직접 열어서 수정한다</li>
+<li>mkdir,ls 등등 사용</li>
+<li>rm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제</li>
+<li>rm test.txt # 일반 파일 삭제</li>
+</ul>
+</section>
+<section id="메모장" class="level2">
+<h2 class="anchored" data-anchor-id="메모장">2. 메모장</h2>
+<ul>
+<li>터미널에서 vi는 메모장을 의미</li>
+<li>vi ttt.txt # 없으면 새로 만들고 있으면 기존의 파일을 연다</li>
+</ul>
+<p>명령어</p>
+<ul>
+<li>i # 메모를 수정한다</li>
+<li>esc # 수정하고 있는것을 나가기</li>
+<li>:w 저장</li>
+<li>:q 나가기</li>
+<li>:wq 가능</li>
+<li>e,b 좌우 이동</li>
+<li>/찾을단어 # ctrl F 기능 n과 shift n으로 이동이 가능하다</li>
+</ul>
+</section>
+<section id="원격접속" class="level2">
+<h2 class="anchored" data-anchor-id="원격접속">3. 원격접속</h2>
+<ul>
+<li>기본 터미널에서 시작</li>
+<li>ssh username@ip주소</li>
+<li>ex) ssh toolbox@210.117.173.182</li>
+<li>pass:jbnu # 입력이 보이지 않는다</li>
+<li>cd, vi 등등을 이용하여 터미널에서 메모를 수정한다</li>
+<li>원격접속 나가기: crtl+D</li>
+</ul>
+</section>
+<section id="블로그-생성-엄청-어려워-보이지만-사실-할만할지도.." class="level2">
+<h2 class="anchored" data-anchor-id="블로그-생성-엄청-어려워-보이지만-사실-할만할지도..">4. 블로그 생성! 엄청 어려워 보이지만 사실 할만할지도..?</h2>
+<p><strong>4-1. 윈도우 터미널</strong></p>
+<ol type="1">
+<li>우선 윈도우에 쿼토를 다운로드</li>
+<li>clone을 할 레지스토리 생성 후 불러오기</li>
+<li>해당 레지스토리의 파일 연다(cd blog_test)</li>
+</ol>
+<ul>
+<li>quarto create-project –type website:blog</li>
+<li>git add .</li>
+<li>git commit -m .</li>
+<li>git push</li>
+<li>quarto publish gh-pages</li>
+</ul>
+<p><strong>4-2. 해당 레지스토리의 codespaces</strong></p>
+<ol type="1">
+<li>우선 위에 검색창에서 &gt;jupyter lab으로 파이썬 파일 만들기</li>
+<li>파이썬 확장 설치하기</li>
+<li>추천 확장 python+jupyter</li>
+<li>파이썬 커널 선택</li>
+<li>ipynb 파일을 posts 폴더에 넣어주고 raw, 마크다운과 Python 셀을 만들어가며 블로그를 꾸민다.</li>
+</ol>
+<p>코드스페이스에서는 쿼토가 다운되지 않은 상태이므로 코드를 불러와 쿼토를 다운로드한다.</p>
+<ul>
+<li>pip install git+https://github.com/quarto-dev/quarto-cli</li>
+<li>참고 url: https://quarto.org/docs/dashboards/</li>
+</ul>
+<p>수정된 파일 내보내기(블로그를 만드는 것이기에 시간이 조금 걸린다. action에서 확인 가능)</p>
+<ul>
+<li>git add .</li>
+<li>git commit -m .</li>
+<li>git push</li>
+<li>quarto publish –no-browser –no-prompt</li>
+</ul>
+<div id="cell-23" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>[<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>[1, 2, 3, 5]</code></pre>
 </div>
 </div>
- <!-- /main -->
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -165,6 +305,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
