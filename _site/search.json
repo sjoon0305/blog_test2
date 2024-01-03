@@ -11,7 +11,77 @@
     "href": "posts/PINN0104.html",
     "title": "PINN 01/04",
     "section": "",
-    "text": "아직 수정중\n\n1+1\n\n2"
+    "text": "신경망-몇개의 층, 은닉 unit, 학습률, 활성화 함수 처음에는 완벽히 예측하는것은 불가능\n\n\n처음엔 아이디어, 코드를 작성, 설정이 잘 되는지 실험  위과정 반복\n\n사이클을 얼마나 효율적으로 도는지\n훈련세트/교차 검증 세트/테스트 세트 데이터를 이렇게 분할 뒤 두개가 점점 작아지는 추세 엄청 큰 데이터셋일때 98 1 1 훈련셋과 테스트 셋은 같은 분포를 가져는 것이 좋다! 위 규칙을 따를수록 알고리즘 발달\n비편향 추정이 필요없는 경우 테스트 셋이 없어도 됨 훈련 개발 개발을 테스트 셋으로 사용(과적합 조심)\nW1-2 편향 bias 분산 variance 과대적합\nW1-3 알고리즘의 편향과 분산을 확인\n더 많은 은닉유닛 or 은닉층 or 더 오랜 시간 훈련 or 다른 발전되 최적화 알고리즘\n\n\n편향 문제를 해결할때까지 사이클을 반복 훈련 데이터를 더 얻는 것은 도움이 안된다\n\n\n편향 문제를 어느 정도 해결 -&gt; 분산 문제를 확인\n\n\n현대에 와서 더 큰 네트워크의 훈련은 편향을 감소시키고 많은 데이터를 얻는 것이 분산을 감소 즉, 편향과 분산의 균형을 유지할 수 있다"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-1-머신러닝-문제-해결",
+    "href": "posts/PINN0104.html#w1-1-머신러닝-문제-해결",
+    "title": "PINN 01/04",
+    "section": "",
+    "text": "신경망-몇개의 층, 은닉 unit, 학습률, 활성화 함수 처음에는 완벽히 예측하는것은 불가능\n\n\n처음엔 아이디어, 코드를 작성, 설정이 잘 되는지 실험  위과정 반복\n\n사이클을 얼마나 효율적으로 도는지\n훈련세트/교차 검증 세트/테스트 세트 데이터를 이렇게 분할 뒤 두개가 점점 작아지는 추세 엄청 큰 데이터셋일때 98 1 1 훈련셋과 테스트 셋은 같은 분포를 가져는 것이 좋다! 위 규칙을 따를수록 알고리즘 발달\n비편향 추정이 필요없는 경우 테스트 셋이 없어도 됨 훈련 개발 개발을 테스트 셋으로 사용(과적합 조심)\nW1-2 편향 bias 분산 variance 과대적합\nW1-3 알고리즘의 편향과 분산을 확인\n더 많은 은닉유닛 or 은닉층 or 더 오랜 시간 훈련 or 다른 발전되 최적화 알고리즘\n\n\n편향 문제를 해결할때까지 사이클을 반복 훈련 데이터를 더 얻는 것은 도움이 안된다\n\n\n편향 문제를 어느 정도 해결 -&gt; 분산 문제를 확인\n\n\n현대에 와서 더 큰 네트워크의 훈련은 편향을 감소시키고 많은 데이터를 얻는 것이 분산을 감소 즉, 편향과 분산의 균형을 유지할 수 있다"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w-1-4-정규화",
+    "href": "posts/PINN0104.html#w-1-4-정규화",
+    "title": "PINN 01/04",
+    "section": "W 1-4 정규화",
+    "text": "W 1-4 정규화\n높은 분산일때 정규화를 통해 과적합을 막고 신경망의 분산을 줄임 - 1. 로지스틱 회귀 J(w,b)에 regulation parameter λ 를 추가하여 w에 대해 정규화 w는 꽤 높은 차원의 매개변수 벡터이기 때문 L2 regulation: t(w)*t\n\n\nNeural network"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w-1-5-정규화가-어떻게-과적합을-막는지",
+    "href": "posts/PINN0104.html#w-1-5-정규화가-어떻게-과적합을-막는지",
+    "title": "PINN 01/04",
+    "section": "W 1-5 정규화가 어떻게 과적합을 막는지",
+    "text": "W 1-5 정규화가 어떻게 과적합을 막는지\n\nλ를 최소화해서 가중치 행렬 w를 0에 상당히 가깝게 설정하여 로지스틱 회귀에 가까운 네트워크 형성\n은닉 유닛의 영향을 줄이고 간단하고 작은 신경망을 만듬"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-6-drop-out-정규화-기법",
+    "href": "posts/PINN0104.html#w1-6-drop-out-정규화-기법",
+    "title": "PINN 01/04",
+    "section": "W1-6 Drop out 정규화 기법",
+    "text": "W1-6 Drop out 정규화 기법\n\n\n신경망의 각각의 층에 노드를 삭제하는 확률을 설정함\n\n\n삭제된 노드의 링크를 모두 삭제\n\n\na3 삭제될 확률 d3(True or False)를 곱한 값, 기대값을 맞추기 위해 /keep-prob로 나눔"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-7-dropout이-정규화로-잘-작동하는-이유",
+    "href": "posts/PINN0104.html#w1-7-dropout이-정규화로-잘-작동하는-이유",
+    "title": "PINN 01/04",
+    "section": "W1-7 Dropout이 정규화로 잘 작동하는 이유",
+    "text": "W1-7 Dropout이 정규화로 잘 작동하는 이유\n\n더 작은 신경망이 분산을 작게함\n1차원 신경망의 경우 가중치를 분산시켜 가중치의 노름의 제곱값을 줄어들게 함\n드롭아웃은 L2 정규화와 비슷한 효과를 보여줌\n복잡한 층은 낮은 keep-prob, 단순한 층은 높은 keep-prob\n입력층에는 0.9또는 1\n비용함수가 잘 정의되지 않음"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-8-정규화의-여러-방법들",
+    "href": "posts/PINN0104.html#w1-8-정규화의-여러-방법들",
+    "title": "PINN 01/04",
+    "section": "W1-8 정규화의 여러 방법들",
+    "text": "W1-8 정규화의 여러 방법들\n\n\n훈련셋의 무작위적인 왜곡과 변형으로 훈련셋을 늘릴 수도 있음\n\n\nEarly stopping : data set error 가 꺾이는 점에서 학습을 끝냄\n\nw는 반복을 거듭할 수록 커짐 그래서 w에 대해 더 작은 노름을 갖을 때 반복을 멈춤\n비용함수를 잘 줄이지 못함"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-9-입력의-정규화",
+    "href": "posts/PINN0104.html#w1-9-입력의-정규화",
+    "title": "PINN 01/04",
+    "section": "W1-9 입력의 정규화",
+    "text": "W1-9 입력의 정규화\n\n신경망의 훈련을 빠르게 할 수 있다.\n\n평균을 뺀다\n\n\n정규화\n\n훈련셋과 테스트셋은 똑같이 정규화한다"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-10-vanishingexploding-gradients",
+    "href": "posts/PINN0104.html#w1-10-vanishingexploding-gradients",
+    "title": "PINN 01/04",
+    "section": "W1-10 Vanishing/Exploding Gradients",
+    "text": "W1-10 Vanishing/Exploding Gradients\n\n1.5 or 0.5 이면 매우 깊은 네트워크의 경우 활성값이 기하급수적 증가 또는 감소"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-11-weight-initialization-가중치-초기화",
+    "href": "posts/PINN0104.html#w1-11-weight-initialization-가중치-초기화",
+    "title": "PINN 01/04",
+    "section": "W1-11 Weight Initialization 가중치 초기화",
+    "text": "W1-11 Weight Initialization 가중치 초기화\n\n가중치 초기화를 통해 경사 소실/급증을 막을 수 있다"
+  },
+  {
+    "objectID": "posts/PINN0104.html#w1-14-grad-check",
+    "href": "posts/PINN0104.html#w1-14-grad-check",
+    "title": "PINN 01/04",
+    "section": "W1-14 Grad check",
+    "text": "W1-14 Grad check\n\n\ndseta에 가깝게 함\n\n정규화를 한다\n드롭아웃 사용하지 않는다\nw와\n\n\n1+1\n\n2"
   },
   {
     "objectID": "about.html",
