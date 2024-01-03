@@ -268,12 +268,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>수정된 파일 내보내기(블로그를 만드는 것이기에 시간이 조금 걸린다. action에서 확인 가능)</p>
 <ul>
-<li>git add .</li>
-<li>git commit -m .</li>
-<li>git push</li>
-<li>quarto publish –no-browser –no-prompt</li>
+<li><p>git add .</p></li>
+<li><p>git commit -m .</p></li>
+<li><p>git push</p></li>
+<li><p>quarto publish –no-browser –no-prompt</p></li>
+<li><p>기존의 codespace를 쓰면 번거로움이 덜하다(확장설치, 커널 선택 등이 필요가 없다)</p></li>
+<li><p>하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?</p></li>
+<li><p>윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다.</p></li>
 </ul>
-<div id="cell-23" class="cell" data-execution_count="2">
+<div id="cell-24" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>[<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
