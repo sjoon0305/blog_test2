@@ -7,18 +7,11 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "posts/Day1.html",
-    "href": "posts/Day1.html",
-    "title": "나의 블로그 만들기 도전기 Day1",
-    "section": "",
-    "text": "깃헙에서 gitprac 레지스토리 생성\n1-1.윈도우 터미널에서 파일 수정\n\ngit clone https://github.com/sjoon0305/gitprac.git\ncd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.\ngit config –global user.email “you@example.com”\ngit config –global user.name “Your Name” # 이 두 코드로 나를 인식\ngit add .\ngit commit -m .\ngit push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다\n\n1-2. Github의 codespaces의 terminal에서 직접 수정\n\n코드스페이스에서 파일을 직접 열어서 수정한다\nmkdir,ls 등등 사용\nrm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제\nrm test.txt # 일반 파일 삭제"
-  },
-  {
     "objectID": "posts/Day1.html#github의-파일-수정하기",
     "href": "posts/Day1.html#github의-파일-수정하기",
     "title": "나의 블로그 만들기 도전기 Day1",
-    "section": "",
-    "text": "깃헙에서 gitprac 레지스토리 생성\n1-1.윈도우 터미널에서 파일 수정\n\ngit clone https://github.com/sjoon0305/gitprac.git\ncd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.\ngit config –global user.email “you@example.com”\ngit config –global user.name “Your Name” # 이 두 코드로 나를 인식\ngit add .\ngit commit -m .\ngit push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다\n\n1-2. Github의 codespaces의 terminal에서 직접 수정\n\n코드스페이스에서 파일을 직접 열어서 수정한다\nmkdir,ls 등등 사용\nrm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제\nrm test.txt # 일반 파일 삭제"
+    "section": "1. Github의 파일 수정하기",
+    "text": "1. Github의 파일 수정하기\n깃헙에서 gitprac 레지스토리 생성\n1-1.윈도우 터미널에서 파일 수정\n\ngit clone https://github.com/sjoon0305/gitprac.git\ncd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.\ngit config –global user.email “you@example.com”\ngit config –global user.name “Your Name” # 이 두 코드로 나를 인식\ngit add .\ngit commit -m .\ngit push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다\n\n1-2. Github의 codespaces의 terminal에서 직접 수정\n\n코드스페이스에서 파일을 직접 열어서 수정한다\nmkdir,ls 등등 사용\nrm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제\nrm test.txt # 일반 파일 삭제"
   },
   {
     "objectID": "posts/Day1.html#메모장",
