@@ -7,11 +7,32 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
+    "objectID": "posts/PINN0104.html",
+    "href": "posts/PINN0104.html",
+    "title": "PINN 01/04",
+    "section": "",
+    "text": "아직 수정중\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About ME",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "목차",
+    "section": "",
+    "text": "PINN 01/04\n\n\n\n\n\n\ngrad School\n\n\n\n\n\n\n\n\n\nJan 4, 2024\n\n\n유성준\n\n\n\n\n\n\n\n\n\n\n\n\n나의 블로그 만들기 도전기 Day1\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\n유성준\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 31, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/Day1.html#github의-파일-수정하기",
     "href": "posts/Day1.html#github의-파일-수정하기",
     "title": "나의 블로그 만들기 도전기 Day1",
     "section": "1. Github의 파일 수정하기",
-    "text": "1. Github의 파일 수정하기\n깃헙에서 gitprac 레지스토리 생성\n1-1.윈도우 터미널에서 파일 수정\n\ngit clone https://github.com/sjoon0305/gitprac.git\ncd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.\ngit config –global user.email “you@example.com”\ngit config –global user.name “Your Name” # 이 두 코드로 나를 인식\ngit add .\ngit commit -m .\ngit push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다\n\n1-2. Github의 codespaces의 terminal에서 직접 수정\n\n코드스페이스에서 파일을 직접 열어서 수정한다\nmkdir,ls 등등 사용\nrm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제\nrm test.txt # 일반 파일 삭제"
+    "text": "1. Github의 파일 수정하기\n깃헙에서 gitprac 레지스토리 생성\n1-1.윈도우 터미널에서 파일 수정\n\ngit clone https://github.com/sjoon0305/gitprac.git\ncd gitprac # 가져온 레지스토리 폴더를 열어 준 뒤, readme 파일이나 다른 파일을 수정한다.\ngit config –global user.email “you@example.com”\ngit config –global user.name “Your Name” # 이 두 코드로 나를 인식\ngit add .\ngit commit -m .\ngit push # 처음에 윈도우에서 깃헙 로그인 창이 뜬다\n\n1-2. Github의 codespaces의 terminal에서 직접 수정\n\n코드스페이스에서 파일을 직접 열어서 수정한다\nmkdir,ls 등등 사용\nrm -rf 폴더명 # 폴더와 안에 있는 파일들까지 모두 삭제\nrm test.txt # 일반 파일 삭제\n\ngit add .\ngit commit -m .\ngit push"
   },
   {
     "objectID": "posts/Day1.html#메모장",
@@ -40,20 +61,6 @@
     "title": "나의 블로그 만들기 도전기 Day1",
     "section": "5. 주의할 점과 궁금한 점",
     "text": "5. 주의할 점과 궁금한 점\n\n기존의 codespace를 쓰면 번거로움이 덜하다(쿼토 다운로드, 확장설치, 커널 선택 등을 다시할 필요가 없다)\n하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?\ncodespaces에서 그림을 가져오는 방법을 찾지 못해 윈도우에서 클론을 한뒤 그림 파일을 폴더에 첨부해서 가져왔다. 그럼 codespace에서 그림을 가져올 수 있을까?\n기존 코드 스페이스에서는 수정된 파일을 읽지 못했는데 이때 클론을 써야할까?\n윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다.\n\n\na=[1,2,3]\na+[5]\n\n[1, 2, 3, 5]"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "목차",
-    "section": "",
-    "text": "나의 블로그 만들기 도전기 Day1\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\n유성준\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 31, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About ME",
-    "section": "",
-    "text": "About this blog"
   },
   {
     "objectID": "posts/post-with-code/index.html",
