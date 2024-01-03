@@ -9,7 +9,7 @@
 <meta name="author" content="유성준">
 <meta name="dcterms.date" content="2024-01-03">
 
-<title>Quarto를 활용한 블로그 - 나의 블로그 만들기 도전기 Day1</title>
+<title>유성준 블로그 - 나의 블로그 만들기 도전기 Day1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Quarto를 활용한 블로그</span>
+    <span class="navbar-title">유성준 블로그</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -264,19 +264,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>코드스페이스에서는 쿼토가 다운되지 않은 상태이므로 코드를 불러와 쿼토를 다운로드한다.</p>
 <ul>
 <li>pip install git+https://github.com/quarto-dev/quarto-cli</li>
-<li>참고 url: https://quarto.org/docs/dashboards/</li>
+<li>참고 url: <a href="https://quarto.org/docs/dashboards/">Quarto 홈페이지</a></li>
 </ul>
 <p>수정된 파일 내보내기(블로그를 만드는 것이기에 시간이 조금 걸린다. action에서 확인 가능)</p>
 <ul>
-<li><p>git add .</p></li>
-<li><p>git commit -m .</p></li>
-<li><p>git push</p></li>
-<li><p>quarto publish –no-browser –no-prompt</p></li>
-<li><p>기존의 codespace를 쓰면 번거로움이 덜하다(확장설치, 커널 선택 등이 필요가 없다)</p></li>
-<li><p>하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?</p></li>
-<li><p>윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다.</p></li>
+<li>git add .</li>
+<li>git commit -m .</li>
+<li>git push</li>
+<li>quarto publish –no-browser –no-prompt</li>
 </ul>
-<div id="cell-24" class="cell" data-execution_count="2">
+</section>
+<section id="주의할-점과-궁금한-점" class="level2">
+<h2 class="anchored" data-anchor-id="주의할-점과-궁금한-점">5. 주의할 점과 궁금한 점</h2>
+<ul>
+<li>기존의 codespace를 쓰면 번거로움이 덜하다(쿼토 다운로드, 확장설치, 커널 선택 등을 다시할 필요가 없다)</li>
+<li>하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?</li>
+<li>codespaces에서 그림을 가져오는 방법을 찾지 못해 윈도우에서 클론을 한뒤 그림 파일을 폴더에 첨부해서 가져왔다. 그럼 codespace에서 그림을 가져올 수 있을까?</li>
+<li>기존 코드 스페이스에서는 수정된 파일을 읽지 못했는데 이때 클론을 써야할까?</li>
+<li>윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다.</li>
+</ul>
+<div id="cell-25" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>[<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
