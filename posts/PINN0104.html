@@ -188,8 +188,123 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>아직 수정중</p>
-<div id="cell-2" class="cell" data-execution_count="2">
+<section id="w1-1-머신러닝-문제-해결" class="level2">
+<h2 class="anchored" data-anchor-id="w1-1-머신러닝-문제-해결">W1-1 머신러닝 문제 해결</h2>
+<ol type="1">
+<li>신경망-몇개의 층, 은닉 unit, 학습률, 활성화 함수 처음에는 완벽히 예측하는것은 불가능</li>
+</ol>
+<ul>
+<li>처음엔 아이디어, 코드를 작성, 설정이 잘 되는지 실험 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcIuvHr%2Fbtq21C3SFcL%2FnZzkxZnzkbVdjVxos7P7Hk%2Fimg.png" class="img-fluid"> 위과정 반복</li>
+</ul>
+<p>사이클을 얼마나 효율적으로 도는지</p>
+<p>훈련세트/교차 검증 세트/테스트 세트 데이터를 이렇게 분할 뒤 두개가 점점 작아지는 추세 엄청 큰 데이터셋일때 98 1 1 훈련셋과 테스트 셋은 같은 분포를 가져는 것이 좋다! 위 규칙을 따를수록 알고리즘 발달</p>
+<p>비편향 추정이 필요없는 경우 테스트 셋이 없어도 됨 훈련 개발 개발을 테스트 셋으로 사용(과적합 조심)</p>
+<p>W1-2 편향 bias 분산 variance 과대적합</p>
+<p>W1-3 알고리즘의 편향과 분산을 확인</p>
+<p>더 많은 은닉유닛 or 은닉층 or 더 오랜 시간 훈련 or 다른 발전되 최적화 알고리즘</p>
+<ul>
+<li><ol type="1">
+<li>편향 문제를 해결할때까지 사이클을 반복 훈련 데이터를 더 얻는 것은 도움이 안된다</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>편향 문제를 어느 정도 해결 -&gt; 분산 문제를 확인</li>
+</ol></li>
+</ul>
+<p>현대에 와서 더 큰 네트워크의 훈련은 편향을 감소시키고 많은 데이터를 얻는 것이 분산을 감소 즉, 편향과 분산의 균형을 유지할 수 있다</p>
+</section>
+<section id="w-1-4-정규화" class="level2">
+<h2 class="anchored" data-anchor-id="w-1-4-정규화">W 1-4 정규화</h2>
+<p>높은 분산일때 정규화를 통해 과적합을 막고 신경망의 분산을 줄임 - 1. 로지스틱 회귀 J(w,b)에 regulation parameter λ 를 추가하여 w에 대해 정규화 w는 꽤 높은 차원의 매개변수 벡터이기 때문 L2 regulation: t(w)*t</p>
+<ul>
+<li><ol start="2" type="1">
+<li>Neural network</li>
+</ol></li>
+</ul>
+</section>
+<section id="w-1-5-정규화가-어떻게-과적합을-막는지" class="level2">
+<h2 class="anchored" data-anchor-id="w-1-5-정규화가-어떻게-과적합을-막는지">W 1-5 정규화가 어떻게 과적합을 막는지</h2>
+<ul>
+<li>λ를 최소화해서 가중치 행렬 w를 0에 상당히 가깝게 설정하여 로지스틱 회귀에 가까운 네트워크 형성</li>
+<li>은닉 유닛의 영향을 줄이고 간단하고 작은 신경망을 만듬</li>
+</ul>
+</section>
+<section id="w1-6-drop-out-정규화-기법" class="level2">
+<h2 class="anchored" data-anchor-id="w1-6-drop-out-정규화-기법">W1-6 Drop out 정규화 기법</h2>
+<ul>
+<li><ol type="1">
+<li>신경망의 각각의 층에 노드를 삭제하는 확률을 설정함</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>삭제된 노드의 링크를 모두 삭제</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>a3 삭제될 확률 d3(True or False)를 곱한 값, 기대값을 맞추기 위해 /keep-prob로 나눔</li>
+</ol></li>
+</ul>
+</section>
+<section id="w1-7-dropout이-정규화로-잘-작동하는-이유" class="level2">
+<h2 class="anchored" data-anchor-id="w1-7-dropout이-정규화로-잘-작동하는-이유">W1-7 Dropout이 정규화로 잘 작동하는 이유</h2>
+<ul>
+<li>더 작은 신경망이 분산을 작게함</li>
+<li>1차원 신경망의 경우 가중치를 분산시켜 가중치의 노름의 제곱값을 줄어들게 함</li>
+<li>드롭아웃은 L2 정규화와 비슷한 효과를 보여줌</li>
+<li>복잡한 층은 낮은 keep-prob, 단순한 층은 높은 keep-prob</li>
+<li>입력층에는 0.9또는 1</li>
+<li>비용함수가 잘 정의되지 않음</li>
+</ul>
+</section>
+<section id="w1-8-정규화의-여러-방법들" class="level2">
+<h2 class="anchored" data-anchor-id="w1-8-정규화의-여러-방법들">W1-8 정규화의 여러 방법들</h2>
+<ul>
+<li><ol type="1">
+<li>훈련셋의 무작위적인 왜곡과 변형으로 훈련셋을 늘릴 수도 있음</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Early stopping : data set error 가 꺾이는 점에서 학습을 끝냄</li>
+</ol></li>
+<li>w는 반복을 거듭할 수록 커짐 그래서 w에 대해 더 작은 노름을 갖을 때 반복을 멈춤</li>
+<li>비용함수를 잘 줄이지 못함</li>
+<li><ol start="3" type="1">
+<li></li>
+</ol></li>
+</ul>
+</section>
+<section id="w1-9-입력의-정규화" class="level2">
+<h2 class="anchored" data-anchor-id="w1-9-입력의-정규화">W1-9 입력의 정규화</h2>
+<ul>
+<li>신경망의 훈련을 빠르게 할 수 있다.</li>
+<li><ol type="1">
+<li>평균을 뺀다</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>정규화</li>
+</ol></li>
+<li>훈련셋과 테스트셋은 똑같이 정규화한다</li>
+</ul>
+</section>
+<section id="w1-10-vanishingexploding-gradients" class="level2">
+<h2 class="anchored" data-anchor-id="w1-10-vanishingexploding-gradients">W1-10 Vanishing/Exploding Gradients</h2>
+<ul>
+<li>1.5 or 0.5 이면 매우 깊은 네트워크의 경우 활성값이 기하급수적 증가 또는 감소</li>
+</ul>
+</section>
+<section id="w1-11-weight-initialization-가중치-초기화" class="level2">
+<h2 class="anchored" data-anchor-id="w1-11-weight-initialization-가중치-초기화">W1-11 Weight Initialization 가중치 초기화</h2>
+<ul>
+<li>가중치 초기화를 통해 경사 소실/급증을 막을 수 있다</li>
+</ul>
+</section>
+<section id="w1-14-grad-check" class="level2">
+<h2 class="anchored" data-anchor-id="w1-14-grad-check">W1-14 Grad check</h2>
+<ul>
+<li><ol type="1">
+<li>dseta에 가깝게 함</li>
+</ol></li>
+<li>정규화를 한다</li>
+<li>드롭아웃 사용하지 않는다</li>
+<li>w와</li>
+</ul>
+<div id="cell-14" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2</code></pre>
@@ -197,6 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
