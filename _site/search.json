@@ -65,98 +65,91 @@
   {
     "objectID": "posts/DLC2.html",
     "href": "posts/DLC2.html",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "",
     "text": "신경망-몇개의 층, 은닉 unit, 학습률, 활성화 함수 처음에는 완벽히 예측하는것은 불가능\n\n\n처음엔 아이디어, 코드를 작성, 설정이 잘 되는지 실험  위과정 반복\n\n사이클을 얼마나 효율적으로 도는지\n훈련세트/교차 검증 세트/테스트 세트 데이터를 이렇게 분할 뒤 두개가 점점 작아지는 추세 엄청 큰 데이터셋일때 98 1 1 훈련셋과 테스트 셋은 같은 분포를 가져는 것이 좋다! 위 규칙을 따를수록 알고리즘 발달\n비편향 추정이 필요없는 경우 테스트 셋이 없어도 됨 훈련 개발 개발을 테스트 셋으로 사용(과적합 조심)\nW1-2 편향 bias 분산 variance 과대적합\nW1-3 알고리즘의 편향과 분산을 확인\n더 많은 은닉유닛 or 은닉층 or 더 오랜 시간 훈련 or 다른 발전되 최적화 알고리즘\n\n\n편향 문제를 해결할때까지 사이클을 반복 훈련 데이터를 더 얻는 것은 도움이 안된다\n\n\n편향 문제를 어느 정도 해결 -&gt; 분산 문제를 확인\n\n\n현대에 와서 더 큰 네트워크의 훈련은 편향을 감소시키고 많은 데이터를 얻는 것이 분산을 감소 즉, 편향과 분산의 균형을 유지할 수 있다"
   },
   {
     "objectID": "posts/DLC2.html#w1-1-머신러닝-문제-해결",
     "href": "posts/DLC2.html#w1-1-머신러닝-문제-해결",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "",
     "text": "신경망-몇개의 층, 은닉 unit, 학습률, 활성화 함수 처음에는 완벽히 예측하는것은 불가능\n\n\n처음엔 아이디어, 코드를 작성, 설정이 잘 되는지 실험  위과정 반복\n\n사이클을 얼마나 효율적으로 도는지\n훈련세트/교차 검증 세트/테스트 세트 데이터를 이렇게 분할 뒤 두개가 점점 작아지는 추세 엄청 큰 데이터셋일때 98 1 1 훈련셋과 테스트 셋은 같은 분포를 가져는 것이 좋다! 위 규칙을 따를수록 알고리즘 발달\n비편향 추정이 필요없는 경우 테스트 셋이 없어도 됨 훈련 개발 개발을 테스트 셋으로 사용(과적합 조심)\nW1-2 편향 bias 분산 variance 과대적합\nW1-3 알고리즘의 편향과 분산을 확인\n더 많은 은닉유닛 or 은닉층 or 더 오랜 시간 훈련 or 다른 발전되 최적화 알고리즘\n\n\n편향 문제를 해결할때까지 사이클을 반복 훈련 데이터를 더 얻는 것은 도움이 안된다\n\n\n편향 문제를 어느 정도 해결 -&gt; 분산 문제를 확인\n\n\n현대에 와서 더 큰 네트워크의 훈련은 편향을 감소시키고 많은 데이터를 얻는 것이 분산을 감소 즉, 편향과 분산의 균형을 유지할 수 있다"
   },
   {
     "objectID": "posts/DLC2.html#w-1-4-정규화",
     "href": "posts/DLC2.html#w-1-4-정규화",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W 1-4 정규화",
     "text": "W 1-4 정규화\n높은 분산일때 정규화를 통해 과적합을 막고 신경망의 분산을 줄임 - 1. 로지스틱 회귀 J(w,b)에 regulation parameter λ 를 추가하여 w에 대해 정규화 w는 꽤 높은 차원의 매개변수 벡터이기 때문 L2 regulation: t(w)*t\n\n\nNeural network"
   },
   {
     "objectID": "posts/DLC2.html#w-1-5-정규화가-어떻게-과적합을-막는지",
     "href": "posts/DLC2.html#w-1-5-정규화가-어떻게-과적합을-막는지",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W 1-5 정규화가 어떻게 과적합을 막는지",
     "text": "W 1-5 정규화가 어떻게 과적합을 막는지\n\nλ를 최소화해서 가중치 행렬 w를 0에 상당히 가깝게 설정하여 로지스틱 회귀에 가까운 네트워크 형성\n은닉 유닛의 영향을 줄이고 간단하고 작은 신경망을 만듬"
   },
   {
     "objectID": "posts/DLC2.html#w1-6-drop-out-정규화-기법",
     "href": "posts/DLC2.html#w1-6-drop-out-정규화-기법",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-6 Drop out 정규화 기법",
     "text": "W1-6 Drop out 정규화 기법\n\n\n신경망의 각각의 층에 노드를 삭제하는 확률을 설정함\n\n\n삭제된 노드의 링크를 모두 삭제\n\n\na3 삭제될 확률 d3(True or False)를 곱한 값, 기대값을 맞추기 위해 /keep-prob로 나눔"
   },
   {
     "objectID": "posts/DLC2.html#w1-7-dropout이-정규화로-잘-작동하는-이유",
     "href": "posts/DLC2.html#w1-7-dropout이-정규화로-잘-작동하는-이유",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-7 Dropout이 정규화로 잘 작동하는 이유",
     "text": "W1-7 Dropout이 정규화로 잘 작동하는 이유\n\n더 작은 신경망이 분산을 작게함\n1차원 신경망의 경우 가중치를 분산시켜 가중치의 노름의 제곱값을 줄어들게 함\n드롭아웃은 L2 정규화와 비슷한 효과를 보여줌\n복잡한 층은 낮은 keep-prob, 단순한 층은 높은 keep-prob\n입력층에는 0.9또는 1\n비용함수가 잘 정의되지 않음"
   },
   {
     "objectID": "posts/DLC2.html#w1-8-정규화의-여러-방법들",
     "href": "posts/DLC2.html#w1-8-정규화의-여러-방법들",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-8 정규화의 여러 방법들",
     "text": "W1-8 정규화의 여러 방법들\n\n\n훈련셋의 무작위적인 왜곡과 변형으로 훈련셋을 늘릴 수도 있음\n\n\nEarly stopping : data set error 가 꺾이는 점에서 학습을 끝냄\n\nw는 반복을 거듭할 수록 커짐 그래서 w에 대해 더 작은 노름을 갖을 때 반복을 멈춤\n비용함수를 잘 줄이지 못함"
   },
   {
     "objectID": "posts/DLC2.html#w1-9-입력의-정규화",
     "href": "posts/DLC2.html#w1-9-입력의-정규화",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-9 입력의 정규화",
     "text": "W1-9 입력의 정규화\n\n신경망의 훈련을 빠르게 할 수 있다.\n\n평균을 뺀다\n\n\n정규화\n\n훈련셋과 테스트셋은 똑같이 정규화한다"
   },
   {
     "objectID": "posts/DLC2.html#w1-10-vanishingexploding-gradients",
     "href": "posts/DLC2.html#w1-10-vanishingexploding-gradients",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-10 Vanishing/Exploding Gradients",
     "text": "W1-10 Vanishing/Exploding Gradients\n\n1.5 or 0.5 이면 매우 깊은 네트워크의 경우 활성값이 기하급수적 증가 또는 감소"
   },
   {
     "objectID": "posts/DLC2.html#w1-11-weight-initialization-가중치-초기화",
     "href": "posts/DLC2.html#w1-11-weight-initialization-가중치-초기화",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-11 Weight Initialization 가중치 초기화",
     "text": "W1-11 Weight Initialization 가중치 초기화\n\n가중치 초기화를 통해 경사 소실/급증을 막을 수 있다"
   },
   {
     "objectID": "posts/DLC2.html#w1-14-grad-check",
     "href": "posts/DLC2.html#w1-14-grad-check",
-    "title": "DL C2 Andrew ng 01/00",
+    "title": "딥러닝 Course2 by Andrew ng",
     "section": "W1-14 Grad check",
     "text": "W1-14 Grad check\n\n\ndseta에 가깝게 함\n\n정규화를 한다\n드롭아웃 사용하지 않는다\nw와\n\n\n1+1\n\n2"
   },
   {
-    "objectID": "posts/DLC1.html",
-    "href": "posts/DLC1.html",
-    "title": "DL C1-W1,W2 Andrew ng 01/04",
-    "section": "",
-    "text": "X(입력)와 Y(출력)를 연결지어주는 함수를 찾는 과정\n\n\n\n데이터가 많으면 많을수록 성능이 좋은 함수를 찾을 수 있음\n해당 뉴런에 관련 없는 입력값이라도 입력해야 함\n그 입력의 관계 여부, 가중치는 학습하면서 조절됨\n\n\n\n\n\nNN: 데이터베이스화된 데이터에 적합\nCNN: 이미지에 적함\nRNN: 오디오, 텍스트에 적합\n\n\n\n\n\n정형 데이터\n\n데이터베이스로 표현 가능\n정보의 특성 확정\n\n비정형 데이터\n\n오디오, 텍스트, 이미지\n특징값을 추출하기 어려움\n딥러닝 기술 발전으로 판별 가능\n\n\n\n\n\n\n디지털 정보량의 증가, 컴퓨터 성능 향상, 알고리즘 혁신\nSigmoid –&gt; ReLU로 activation function을 바꾸어 학습 속도 향상"
-  },
-  {
     "objectID": "posts/DLC1.html#c1w1",
     "href": "posts/DLC1.html#c1w1",
-    "title": "DL C1-W1,W2 Andrew ng 01/04",
-    "section": "",
-    "text": "X(입력)와 Y(출력)를 연결지어주는 함수를 찾는 과정\n\n\n\n데이터가 많으면 많을수록 성능이 좋은 함수를 찾을 수 있음\n해당 뉴런에 관련 없는 입력값이라도 입력해야 함\n그 입력의 관계 여부, 가중치는 학습하면서 조절됨\n\n\n\n\n\nNN: 데이터베이스화된 데이터에 적합\nCNN: 이미지에 적함\nRNN: 오디오, 텍스트에 적합\n\n\n\n\n\n정형 데이터\n\n데이터베이스로 표현 가능\n정보의 특성 확정\n\n비정형 데이터\n\n오디오, 텍스트, 이미지\n특징값을 추출하기 어려움\n딥러닝 기술 발전으로 판별 가능\n\n\n\n\n\n\n디지털 정보량의 증가, 컴퓨터 성능 향상, 알고리즘 혁신\nSigmoid –&gt; ReLU로 activation function을 바꾸어 학습 속도 향상"
+    "title": "딥러닝 Course1 by Andrew ng",
+    "section": "C1W1",
+    "text": "C1W1\n\nNeural Network\n\nX(입력)와 Y(출력)를 연결지어주는 함수를 찾는 과정\n데이터가 많으면 많을수록 성능이 좋은 함수를 찾을 수 있음\n해당 뉴런에 관련 없는 입력값이라도 입력해야 함\n그 입력의 관계 여부, 가중치는 학습하면서 조절됨\n\n\n\nNN 종류\n\nNN: 데이터베이스화된 데이터에 적합\nCNN: 이미지에 적함\nRNN: 오디오, 텍스트에 적합\n\n\n\nData 종류\n\n정형 데이터\n\n데이터베이스로 표현 가능\n정보의 특성 확정\n\n비정형 데이터\n\n오디오, 텍스트, 이미지\n특징값을 추출하기 어려움\n딥러닝 기술 발전으로 판별 가능\n\n\n\n\n최근에 들어 딥러닝이 발전한 계기\n\n디지털 정보량의 증가, 컴퓨터 성능 향상, 알고리즘 혁신\nSigmoid –&gt; ReLU로 activation function을 바꾸어 학습 속도 향상"
   },
   {
     "objectID": "posts/DLC1.html#c1w2",
     "href": "posts/DLC1.html#c1w2",
-    "title": "DL C1-W1,W2 Andrew ng 01/04",
+    "title": "딥러닝 Course1 by Andrew ng",
     "section": "C1W2",
     "text": "C1W2\n\n신경망 학습방법\n\n정방향 전파\n역방향 전파\n\n\n\nBinary Classification(이진 분류)\n\n1 or 0로 분류하는 것\n연체를 했다 / 연체를 하지 않았다.\n로지스틱 회귀(Logistic regression) 알고리즘 사용\n\n\n\n표기\n\n\\(m\\): 학습을 위한 데이터 세트 수\n\\({(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), ... (x^{(m)}, y^{(m)}), }\\)\n\\(n\\): 입력 데이터 하나의 원소 개수\n\\(x\\): 입력 데이터 하나\n\\(X\\): 입력 데이터\n\\(X = \\begin{bmatrix}\nx^{(1)}_1 & x^{(2)}_1 & \\cdots & x^{(m)}_1 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nx^{(1)}_n & x^{(2)}_n & \\cdots & x^{(m)}_n\n\\end{bmatrix}\\)\nX.shape = (n, m)\n\\(y\\): 출력 데이터 하나\n\\(Y\\): 출력 데이터\n\\(Y = [y^{(1)}, y^{(2)}, ... y^{(n)}]\\)\nY.shape = (1, m)\n\\(\\hat{y}\\): 예측값\n0과 1 사이의 확률값으로 나타남\n\n\n\nLogistic regression(로지스틱 회귀)\n\n\n입력 특성(x)에 대한 실제값(y)을 가지고 예측값(\\(\\hat{y}\\))을 구하고 그 예측값과 실제값의 오차가 최소가 되도록 하는 파라미터(\\(W\\), \\(b\\))를 구해야 함\n\\(W\\): \\(x\\)와 크기가 같은 \\(n\\)차원의 벡터\n\\(b\\): 상수\n예측값은 아래와 같이 구함\n\\(\\hat{y} = \\sigma(W^TX+b)\\)\n\n\n\nSigmoid function\n\n\\(\\sigma(z) = {1 \\over 1 + e^{-z}}\\)\n\n\\(z\\)가 클 수록 1로 수렴\n\\(z\\)가 작을 수록 0으로 수렴\n\n위 식에서 \\(\\sigma\\)가 하는 역할은 예측값이 0에서 1사이가 되도록 만드는 역할\nSigmoid 함수 그래프 \n\\(\\hat{y}\\)은 항상 0에서 1사이의 값을 가진다\n\n\n\nLoss Function(손실 함수)\n\n한 세트에 대한 예측값(\\(\\hat{y}\\))과 실제값(\\(y\\))의 오차를 구하는 함수\n\\(L(y, \\hat{y}) = -(y\\log{\\hat{y}}+(1-y)\\log(1-\\hat{y}))\\)\n실제값(\\(y\\))이 0이냐 1이냐에 따라서 오차를 구하는 식이 달라진다.\n\\(y=0\\)일 때: \\(L(y, \\hat{y}) = -y\\log{(1-\\hat{y})}\\)\n\\(y=1\\)일 때: \\(L(y, \\hat{y}) = -y\\log{\\hat{y}}\\)\n그래프로 표현 \n\n\n\nCost Function(비용 함수)\n\n모든 입력세트에 대한 오차를 구하는 함수\n\\(J(W, b) = -{1 \\over m}\\sum_{i=1}^m(y^{(i)}\\log{\\hat{y}^{(i)}}+(1-y^{(i)})\\log(1-\\hat{y}^{(i)}))\\)\n로지스틱 회귀 모델을 학습한다는 것은 비용 함수 \\(J\\)를 최소로 만드는 \\(W\\)와 \\(b\\)를 찾는 것을 의미\n\n\n\n경사 하강법\n\n비용함수의 값을 최소화하는 \\(w\\)와 \\(b\\)를 찾는데 사용할 수 있는 방법이다. 이때 비용함수는 볼록한(convex) 형태여야 한다. 만약 비용함수의 형태가 볼록하지 않다면 지역 최솟값을 여러 개 가지게 되어 진짜 최솟값을 찾기 어려워진다.\n비용함수의 최솟값을 찾기 위한 시작점은 임의로 정하여도 상관없다. 경사 하강법을 사용하면 어디에서 시작하든 최솟값이 있는 곳으로 향하게 된다. 가파른 방향으로 한 스텝씩 업데이트하며 최솟값을 찾아간다.\n\\(w:=w-\\alpha{\\partial{J(w,b)}\\over\\partial{d}}\\)\n\\(b:=b-\\alpha{\\partial{J(w,b)}\\over\\partial{d}}\\)\n\n\n\n벡터화\n\n벡터화를 사용하여 동시에 분산 처리\n\n\nimport numpy as np\nimport time\n\na = np.random.rand(1000000)\nb = np.random.rand(1000000)\n\ntic = time.time()\nc = np.dot(a, b)\ntoc = time.time()\n\nprint(c)\nprint(\"Vectorized version: \" + str(1000*(toc-tic)) + \"ms\")\n\n250003.57277653238\nVectorized version: 0.49757957458496094ms\n\n\n\nfor 문을 사용해서 순차적으로 계산\n\n\nc = 0\ntic = time.time()\nfor i in range(1000000):\n    c += a[i]*b[i]\ntoc = time.time()\n\nprint(c)\nprint(\"for loop: \" + str(1000*(toc-tic)) + \"ms\")\n\n250003.5727765315\nfor loop: 353.87134552001953ms\n\n\n\n즉 벡터화를 사용한 코드의 시간이 훨씬 빠르다(0.49ms&lt;&lt;353.87ms)\n\n\n\n파이썬 브로드캐스팅\n\n각 식자재 100g당 영양소가 가지는 칼로리 표\n\n\n\n\n\nApples\nBeef\nEggs\nPotatoes\n\n\n\n\nCarb\n56.0\n0.0\n4.4\n68.0\n\n\nProtein\n1.2\n104.0\n52.0\n8.0\n\n\nFat\n1.8\n135.0\n99.0\n0.9\n\n\n\n\n브로딩캐스팅을 이용해 식자재 총 칼로리 중 각 영양소가 차지하는 비율을 구하는 예제\n\n\nimport numpy as np\n\nA = np.array([[56, 0, 4.4, 68],\n[1.2, 104, 52, 8],\n[1.8, 135, 99, 0.9]])\n\ncal = np.sum(A, axis=0)\npercentage = 100*A/cal.reshape(1, 4)\nprint(percentage)\n\n[[94.91525424  0.          2.83140283 88.42652796]\n [ 2.03389831 43.51464435 33.46203346 10.40312094]\n [ 3.05084746 56.48535565 63.70656371  1.17035111]]"
   }
