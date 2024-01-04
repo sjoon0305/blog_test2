@@ -322,8 +322,11 @@ x^{(1)}_n &amp; x^{(2)}_n &amp; \cdots &amp; x^{(m)}_n
 <li><span class="math inline">\(z\)</span>가 작을 수록 0으로 수렴</li>
 </ul></li>
 <li><p>위 식에서 <span class="math inline">\(\sigma\)</span>가 하는 역할은 예측값이 0에서 1사이가 되도록 만드는 역할</p></li>
-<li><p>Sigmoid 함수 그래프 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcb3bEH%2Fbtq0UdlTEZz%2FfDeJKAzPlYkSs011P0fPt0%2Fimg.png" class="img-fluid"></p></li>
-<li><p><span class="math inline">\(\hat{y}\)</span>은 항상 0에서 1사이의 값을 가진다</p></li>
+<li><p>Sigmoid 함수 그래프</p></li>
+</ul>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcb3bEH%2Fbtq0UdlTEZz%2FfDeJKAzPlYkSs011P0fPt0%2Fimg.png" class="img-fluid"></p>
+<ul>
+<li><span class="math inline">\(\hat{y}\)</span>은 항상 0에서 1사이의 값을 가진다</li>
 </ul>
 </section>
 <section id="loss-function손실-함수" class="level3">
@@ -334,7 +337,8 @@ x^{(1)}_n &amp; x^{(2)}_n &amp; \cdots &amp; x^{(m)}_n
 <li><p>실제값(<span class="math inline">\(y\)</span>)이 0이냐 1이냐에 따라서 오차를 구하는 식이 달라진다.</p></li>
 <li><p><span class="math inline">\(y=0\)</span>일 때: <span class="math inline">\(L(y, \hat{y}) = -y\log{(1-\hat{y})}\)</span></p></li>
 <li><p><span class="math inline">\(y=1\)</span>일 때: <span class="math inline">\(L(y, \hat{y}) = -y\log{\hat{y}}\)</span></p></li>
-<li><p>그래프로 표현 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsVKEL%2Fbtq0XQcqf19%2FdLQ59SVLirQbpARynqCPC0%2Fimg.png" class="img-fluid"></p></li>
+<li><p>그래프로 표현</p></li>
+<li><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsVKEL%2Fbtq0XQcqf19%2FdLQ59SVLirQbpARynqCPC0%2Fimg.png" class="img-fluid"></p></li>
 </ul>
 </section>
 <section id="cost-function비용-함수" class="level3">
@@ -353,13 +357,17 @@ x^{(1)}_n &amp; x^{(2)}_n &amp; \cdots &amp; x^{(m)}_n
 <li><span class="math inline">\(w:=w-\alpha{\partial{J(w,b)}\over\partial{d}}\)</span></li>
 <li><span class="math inline">\(b:=b-\alpha{\partial{J(w,b)}\over\partial{d}}\)</span></li>
 </ul>
+<p><img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/national/gradient-descent-convex-function.png" class="img-fluid"></p>
+<ul>
+<li>로지스틱 회귀의 경사 하강법에서 for 문이 알고리즘을 비효율적으로 만듬 -&gt; 벡터화를 통해 명시적 for 문을 제거</li>
+</ul>
 </section>
 <section id="벡터화" class="level3">
 <h3 class="anchored" data-anchor-id="벡터화">벡터화</h3>
 <ul>
 <li>벡터화를 사용하여 동시에 분산 처리</li>
 </ul>
-<div id="cell-18" class="cell" data-execution_count="8">
+<div id="cell-20" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -380,7 +388,7 @@ Vectorized version: 0.49757957458496094ms</code></pre>
 <ul>
 <li>for 문을 사용해서 순차적으로 계산</li>
 </ul>
-<div id="cell-20" class="cell" data-execution_count="9">
+<div id="cell-22" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tic <span class="op">=</span> time.time()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000000</span>):</span>
@@ -440,7 +448,7 @@ for loop: 353.87134552001953ms</code></pre>
 <ul>
 <li>브로딩캐스팅을 이용해 식자재 총 칼로리 중 각 영양소가 차지하는 비율을 구하는 예제</li>
 </ul>
-<div id="cell-25" class="cell" data-execution_count="1">
+<div id="cell-27" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">56</span>, <span class="dv">0</span>, <span class="fl">4.4</span>, <span class="dv">68</span>],</span>
