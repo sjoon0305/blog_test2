@@ -1,0 +1,12 @@
+{
+  "hash": "3d4fe123121d08767ff34bbaad17e977",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Welcome To My Blog\"\nauthor: \"Tristan O'Malley\"\ndate: \"2023-12-31\"\ncategories: [news]\n---\n\nThis is the first post in a Quarto blog. Welcome!\n\n![](thumbnail.jpg)\n\nSince this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.\n\n'-' 회귀분석 공부해보자\n\n'-' 코드삽입\n\n::: {#7f1caebd .cell execution_count=1}\n``` {.python .cell-code}\na = [1,2,4]\na + [3]\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n[1, 2, 4, 3]\n```\n:::\n:::\n\n\n::: {#e9b24d81 .cell execution_count=2}\n``` {.python .cell-code}\n!python --version\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nPython 3.10.13\r\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
