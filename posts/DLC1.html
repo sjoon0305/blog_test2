@@ -219,9 +219,9 @@ window.Quarto = {
 
 
 
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOwS8B%2Fbtq0OjM6g8l%2FqslZkb00YMJV9nUik6t1G1%2Fimg.png" class="img-fluid"></p>
 <section id="c1w1" class="level2">
 <h2 class="anchored" data-anchor-id="c1w1">C1W1</h2>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOwS8B%2Fbtq0OjM6g8l%2FqslZkb00YMJV9nUik6t1G1%2Fimg.png" class="img-fluid"></p>
 <section id="neural-network" class="level3">
 <h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
 <ul>
@@ -367,7 +367,7 @@ x^{(1)}_n &amp; x^{(2)}_n &amp; \cdots &amp; x^{(m)}_n
 <ul>
 <li>벡터화를 사용하여 동시에 분산 처리</li>
 </ul>
-<div id="cell-20" class="cell" data-execution_count="8">
+<div id="cell-21" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -388,7 +388,7 @@ Vectorized version: 0.49757957458496094ms</code></pre>
 <ul>
 <li>for 문을 사용해서 순차적으로 계산</li>
 </ul>
-<div id="cell-22" class="cell" data-execution_count="9">
+<div id="cell-23" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tic <span class="op">=</span> time.time()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000000</span>):</span>
@@ -448,7 +448,7 @@ for loop: 353.87134552001953ms</code></pre>
 <ul>
 <li>브로딩캐스팅을 이용해 식자재 총 칼로리 중 각 영양소가 차지하는 비율을 구하는 예제</li>
 </ul>
-<div id="cell-27" class="cell" data-execution_count="1">
+<div id="cell-28" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">56</span>, <span class="dv">0</span>, <span class="fl">4.4</span>, <span class="dv">68</span>],</span>
