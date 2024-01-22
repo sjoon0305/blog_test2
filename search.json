@@ -32,40 +32,54 @@
     "href": "posts/Day1.html#블로그-생성-엄청-어려워-보이지만-사실-할만할지도..",
     "title": "나의 블로그 만들기 도전기 Day1",
     "section": "4. 블로그 생성! 엄청 어려워 보이지만 사실 할만할지도..?",
-    "text": "4. 블로그 생성! 엄청 어려워 보이지만 사실 할만할지도..?\n4-1. 윈도우 터미널\n\n우선 윈도우에 쿼토를 다운로드\nclone을 할 레지스토리 생성 후 불러오기\n해당 레지스토리의 파일 연다(cd blog_test)\n\n- 아래를 실행\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish gh-pages\n4-2. 해당 레지스토리의 codespaces\n\n우선 위에 검색창에서 &gt;jupyter lab으로 파이썬 파일 만들기\n파이썬 확장 설치하기\n추천 확장 python+jupyter\n파이썬 커널 선택\nipynb 파일을 posts 폴더에 넣어주고 raw, 마크다운과 Python 셀을 만들어가며 블로그를 꾸민다.\n\n코드스페이스에서는 쿼토가 다운되지 않은 상태이므로 코드를 불러와 쿼토를 다운로드한다.\n\npip install git+https://github.com/quarto-dev/quarto-cli\n참고 url: Quarto 홈페이지\n\n수정된 파일 내보내기(블로그를 만드는 것이기에 시간이 조금 걸린다. action에서 확인 가능)\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish --no-browser --no-prompt"
+    "text": "4. 블로그 생성! 엄청 어려워 보이지만 사실 할만할지도..?\n4-1. 윈도우 터미널\n\n우선 윈도우에 쿼토를 다운로드\nclone을 할 레지스토리 생성 후 불러오기\n해당 레지스토리의 파일 연다(cd blog_test)\n\n- 아래를 실행\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish gh-pages\n4-2. 해당 레지스토리의 codespaces\n\n우선 위에 검색창에서 &gt;jupyter lab으로 파이썬 파일 만들기\n파이썬 확장 설치하기\n추천 확장 python+jupyter\n파이썬 커널 선택\nipynb 파일을 posts 폴더에 넣어주고 raw, 마크다운과 Python 셀을 만들어가며 블로그를 꾸민다.\n\n코드스페이스에서는 쿼토가 다운되지 않은 상태이므로 코드를 불러와 쿼토를 다운로드한다.\n\npip install git+https://github.com/quarto-dev/quarto-cli\n참고 url: Quarto 홈페이지\n\n수정된 파일 내보내기(블로그를 만드는 것이기에 시간이 조금 걸린다. action에서 확인 가능)\ngit config credential.helper store\ngit add .\ngit commit -m .\ngit push\nquarto publish --no-browser --no-prompt"
   },
   {
     "objectID": "posts/Day1.html#주의할-점과-궁금한-점",
     "href": "posts/Day1.html#주의할-점과-궁금한-점",
     "title": "나의 블로그 만들기 도전기 Day1",
     "section": "5. 주의할 점과 궁금한 점",
-    "text": "5. 주의할 점과 궁금한 점\n\n기존의 codespace를 쓰면 번거로움이 덜하다(쿼토 다운로드, 확장설치, 커널 선택 등을 다시할 필요가 없다)\n하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?\ncodespaces에서 그림을 가져오는 방법을 찾지 못해 윈도우에서 클론을 한뒤 그림 파일을 폴더에 첨부해서 가져왔다. 그럼 codespace에서 그림을 가져올 수 있을까?\n기존 코드 스페이스에서는 수정된 파일을 읽지 못했는데 이때 클론을 써야할까?\n윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다.\n\n\na=[1,2,3]\na+[5]\n\n[1, 2, 3, 5]"
+    "text": "5. 주의할 점과 궁금한 점\n\n기존의 codespace를 쓰면 번거로움이 덜하다(쿼토 다운로드, 확장설치, 커널 선택 등을 다시할 필요가 없다)\n하지만 만약 레지스토리의 파일이 변경 됐을때는 변경된 파일을 불러오지 못한다 이건 어떻게 해결해야지?\ncodespaces에서 그림을 가져오는 방법을 찾지 못해 윈도우에서 클론을 한뒤 그림 파일을 폴더에 첨부해서 가져왔다. 그럼 codespace에서 그림을 가져올 수 있을까?\n기존 코드 스페이스에서는 수정된 파일을 읽지 못했는데 이때 클론을 써야할까?\n윈도우 터미널에서는 파일이 변경 돼서 클론을 불러올때 기존의 폴더가 있으면 불러오지 못한다 파일을 삭제후 클론을 불러와야한다."
+  },
+  {
+    "objectID": "posts/Day1.html#터미널에서-각종-프로그램-다운로드",
+    "href": "posts/Day1.html#터미널에서-각종-프로그램-다운로드",
+    "title": "나의 블로그 만들기 도전기 Day1",
+    "section": "6. 터미널에서 각종 프로그램 다운로드",
+    "text": "6. 터미널에서 각종 프로그램 다운로드\n- git 다운로드\napt-get install git\n- quarto 다운로드\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.533/quarto-1.4.533-linux-amd64.deb\n- anaconda 다운로드\nwget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh\nbash Anaconda3-2023.09-0-Linux-x86_64.sh\n- git 삭제\nls gi* # gi로 시작하는 파일 보기, 초록은 실행 파일\napt-get remove git"
+  },
+  {
+    "objectID": "posts/Day2.html",
+    "href": "posts/Day2.html",
+    "title": "나의 블로그 만들기 도전기 Day2-총정리",
+    "section": "",
+    "text": "- 우선 터미널에서 나의 가상 환경 열기"
   },
   {
     "objectID": "posts/Day2.html#나만의-쥬피터랩-서버에서-블로그-수정하기",
     "href": "posts/Day2.html#나만의-쥬피터랩-서버에서-블로그-수정하기",
-    "title": "나의 블로그 만들기 도전기 Day2",
+    "title": "나의 블로그 만들기 도전기 Day2-총정리",
     "section": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기",
-    "text": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기\n\n처음 블로그를 만들때 해당 레포지토리를 열고\n\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish gh-pages\n\n변경사항 업데이트\n\ngit config credential.helper store # 이걸실행하고 이후에 한번만 푸시하면 된다. \ngit add .\ngit commit -m .\ngit push\nquarto publish --no-browser --no-prompt\n- https://sjoon0305.github.io/blog_test2/"
+    "text": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기\n\n처음 블로그를 만들때 해당 레포지토리를 열고\n\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish gh-pages\n\n변경사항 업데이트\n\ngit config credential.helper store\ngit add .\ngit commit -m .\ngit push\nquarto publish --no-browser --no-prompt\n- https://sjoon0305.github.io/blog_test2/"
   },
   {
     "objectID": "posts/Day2.html#새로운-가상-환경-만들기",
     "href": "posts/Day2.html#새로운-가상-환경-만들기",
-    "title": "나의 블로그 만들기 도전기 Day2",
+    "title": "나의 블로그 만들기 도전기 Day2-총정리",
     "section": "2. 새로운 가상 환경 만들기",
     "text": "2. 새로운 가상 환경 만들기\nconda create py310 python=3.10 # 가상환경생성 \nconda activate py310 # 가상환경 활성화 \nconda install -c conda-forge jupyterlab # 주피터랩설치\nconda install -c conda-forge notebook # 노트북설치"
   },
   {
     "objectID": "posts/Day2.html#불사의-쥬피터-만들기",
     "href": "posts/Day2.html#불사의-쥬피터-만들기",
-    "title": "나의 블로그 만들기 도전기 Day2",
+    "title": "나의 블로그 만들기 도전기 Day2-총정리",
     "section": "3. 불사의 쥬피터 만들기",
-    "text": "3. 불사의 쥬피터 만들기\n\njupyter_notebook_config.py 파일을연다(이건 초기설정, 딱 한번만 하면된다)\n없다면 아래처럼 만든다\n\njupyter notebook --generate-config\n\n아래와 같이 설정\n\nc.NotebookApp.ip = '0.0.0.0'\nc.NotebookApp.port = 8888 # 8888아니구요. 본인이 쓸수 있는 포트중에서 좋아하는거 쓰세여 \nc.NotebookApp.allow_root = True \nc.NotebookApp.allow_remote_access = True # 당장필요한건 아닌데요.. 해놓으세여 \n- base에서 실행하지 않고 특정 env에서 실행한다!! base 에서 하면 컴퓨터가 맛감\nconda activate py310\npasswd # 쥬피터랩 비밀번호 설정\nnohup jupyter lab --ip=\"0.0.0.0\" --port=20648 --allow-root &gt; /dev/null 2&gt;&1 &"
+    "text": "3. 불사의 쥬피터 만들기\n\njupyter_notebook_config.py 파일을연다(이건 초기설정, 딱 한번만 하면된다)\n없다면 아래처럼 만든다\n\njupyter notebook --generate-config\n\n아래와 같이 설정\n\nc.NotebookApp.ip = '0.0.0.0'\nc.NotebookApp.port = 8888 # 8888아니구요. 본인이 쓸수 있는 포트중에서 좋아하는거 쓰세여 \nc.NotebookApp.allow_root = True \nc.NotebookApp.allow_remote_access = True # 당장필요한건 아닌데요.. 해놓으세여 \n- base에서 실행하지 않고 특정 env에서 실행한다!! base 에서 하면 컴퓨터가 맛감\nconda activate py310\njupyter notebook password # 쥬피터랩 비밀번호 설정\nnohup jupyter lab --ip=\"0.0.0.0\" --port=20648 --allow-root &gt; /dev/null 2&gt;&1 &\njupyter lab --ip='0.0.0.0' --port=20648 --no-browser --allow-root  & # 이건 불사의 쥬피터까지는 아님..\n- 포트는 가상환경이 10648 사용하고 있으니 쥬피터는 20648, 30648, 40648 사용\n\nhttp://210.117.173.186:20648/lab"
   },
   {
     "objectID": "posts/Day2.html#포트-확인하고-죽이기",
     "href": "posts/Day2.html#포트-확인하고-죽이기",
-    "title": "나의 블로그 만들기 도전기 Day2",
+    "title": "나의 블로그 만들기 도전기 Day2-총정리",
     "section": "4. 포트 확인하고 죽이기",
     "text": "4. 포트 확인하고 죽이기\n\n1. 포트 확인\napt-get install lsof\napt install lsof\nlsof -i :23052   # 1번 방법(해당 포트를 사용하고 있는지 확인)\n\nps aux | grep jupyter # 2번 방법(쓰고 있는 모든 포트를 확인)\n\n\n2. 포트 죽이기\nkill 862165\n- 앞으로 마크다운 수식과 문법 정리, 블로그 꾸미기 등등 여러가지를 해보자"
   },
