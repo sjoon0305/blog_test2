@@ -9,7 +9,7 @@
 <meta name="author" content="유성준">
 <meta name="dcterms.date" content="2024-01-09">
 
-<title>유성준 블로그 - 나의 블로그 만들기 도전기 Day2</title>
+<title>Quarto blog - 나의 블로그 만들기 도전기 Day2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">유성준 블로그</span>
+    <span class="navbar-title">Quarto blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -164,15 +198,66 @@ ul.task-list li input[type="checkbox"] {
 <section id="나만의-쥬피터랩-서버에서-블로그-수정하기" class="level2">
 <h2 class="anchored" data-anchor-id="나만의-쥬피터랩-서버에서-블로그-수정하기">1. 나만의 쥬피터랩 서버에서 블로그 수정하기</h2>
 <ul>
-<li>git config credential.helper store</li>
-<li>git add .</li>
-<li>git commit -m .</li>
-<li>git push​</li>
+<li>처음 블로그를 만들때 해당 레포지토리를 열고</li>
 </ul>
-<p>quarto render 를 쓸것인가 아니면 quarto publish를 쓸것인가?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project <span class="at">--type</span> website:blog </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>변경사항 업데이트</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config credential.helper store <span class="co"># 이걸실행하고 이후에 한번만 푸시하면 된다. </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish <span class="at">--no-browser</span> <span class="at">--no-prompt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>-</em> https://sjoon0305.github.io/blog_test2/</p>
+</section>
+<section id="새로운-가상-환경-만들기" class="level2">
+<h2 class="anchored" data-anchor-id="새로운-가상-환경-만들기">2. 새로운 가상 환경 만들기</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create py310 python=3.10 <span class="co"># 가상환경생성 </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate py310 <span class="co"># 가상환경 활성화 </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab <span class="co"># 주피터랩설치</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge notebook <span class="co"># 노트북설치 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="불사의-쥬피터-만들기" class="level2">
+<h2 class="anchored" data-anchor-id="불사의-쥬피터-만들기">3. 불사의 쥬피터 만들기</h2>
+<ul>
+<li>jupyter_notebook_config.py 파일을연다(이건 초기설정, 딱 한번만 하면된다)</li>
+<li>없다면 아래처럼 만든다</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook <span class="at">--generate-config</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>아래와 같이 설정</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">c.NotebookApp.ip</span> = <span class="st">'0.0.0.0'</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">c.NotebookApp.port</span> = 8888 <span class="co"># 8888아니구요. 본인이 쓸수 있는 포트중에서 좋아하는거 쓰세여 </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">c.NotebookApp.allow_root</span> = True </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">c.NotebookApp.allow_remote_access</span> = True <span class="co"># 당장필요한건 아닌데요.. 해놓으세여 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> base에서 실행하지 않고 특정 env에서 실행한다!! base 에서 하면 컴퓨터가 맛감</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate py310</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span> <span class="co"># 쥬피터랩 비밀번호 설정</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nohup</span> jupyter lab <span class="at">--ip</span><span class="op">=</span><span class="st">"0.0.0.0"</span> <span class="at">--port</span><span class="op">=</span>20648 <span class="at">--allow-root</span> <span class="op">&gt;</span> /dev/null <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span> <span class="kw">&amp;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="포트-확인하고-죽이기" class="level2">
+<h2 class="anchored" data-anchor-id="포트-확인하고-죽이기">4. 포트 확인하고 죽이기</h2>
+<section id="포트-확인" class="level3">
+<h3 class="anchored" data-anchor-id="포트-확인">1. 포트 확인</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt-get</span> install lsof</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install lsof</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lsof</span> <span class="at">-i</span> :23052   <span class="co"># 1번 방법(해당 포트를 사용하고 있는지 확인)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> jupyter <span class="co"># 2번 방법(쓰고 있는 모든 포트를 확인)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="포트-죽이기" class="level3">
+<h3 class="anchored" data-anchor-id="포트-죽이기">2. 포트 죽이기</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">kill</span> 862165</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 앞으로 마크다운 수식과 문법 정리, 블로그 꾸미기 등등 여러가지를 해보자</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
