@@ -46,7 +46,28 @@
     "href": "posts/Day2.html#나만의-쥬피터랩-서버에서-블로그-수정하기",
     "title": "나의 블로그 만들기 도전기 Day2",
     "section": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기",
-    "text": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기\n\ngit config credential.helper store\ngit add .\ngit commit -m .\ngit push​\n\nquarto render 를 쓸것인가 아니면 quarto publish를 쓸것인가?\n- https://sjoon0305.github.io/blog_test2/"
+    "text": "1. 나만의 쥬피터랩 서버에서 블로그 수정하기\n\n처음 블로그를 만들때 해당 레포지토리를 열고\n\nquarto create-project --type website:blog \ngit add .\ngit commit -m .\ngit push\nquarto publish gh-pages\n\n변경사항 업데이트\n\ngit config credential.helper store # 이걸실행하고 이후에 한번만 푸시하면 된다. \ngit add .\ngit commit -m .\ngit push\nquarto publish --no-browser --no-prompt\n- https://sjoon0305.github.io/blog_test2/"
+  },
+  {
+    "objectID": "posts/Day2.html#새로운-가상-환경-만들기",
+    "href": "posts/Day2.html#새로운-가상-환경-만들기",
+    "title": "나의 블로그 만들기 도전기 Day2",
+    "section": "2. 새로운 가상 환경 만들기",
+    "text": "2. 새로운 가상 환경 만들기\nconda create py310 python=3.10 # 가상환경생성 \nconda activate py310 # 가상환경 활성화 \nconda install -c conda-forge jupyterlab # 주피터랩설치\nconda install -c conda-forge notebook # 노트북설치"
+  },
+  {
+    "objectID": "posts/Day2.html#불사의-쥬피터-만들기",
+    "href": "posts/Day2.html#불사의-쥬피터-만들기",
+    "title": "나의 블로그 만들기 도전기 Day2",
+    "section": "3. 불사의 쥬피터 만들기",
+    "text": "3. 불사의 쥬피터 만들기\n\njupyter_notebook_config.py 파일을연다(이건 초기설정, 딱 한번만 하면된다)\n없다면 아래처럼 만든다\n\njupyter notebook --generate-config\n\n아래와 같이 설정\n\nc.NotebookApp.ip = '0.0.0.0'\nc.NotebookApp.port = 8888 # 8888아니구요. 본인이 쓸수 있는 포트중에서 좋아하는거 쓰세여 \nc.NotebookApp.allow_root = True \nc.NotebookApp.allow_remote_access = True # 당장필요한건 아닌데요.. 해놓으세여 \n- base에서 실행하지 않고 특정 env에서 실행한다!! base 에서 하면 컴퓨터가 맛감\nconda activate py310\npasswd # 쥬피터랩 비밀번호 설정\nnohup jupyter lab --ip=\"0.0.0.0\" --port=20648 --allow-root &gt; /dev/null 2&gt;&1 &"
+  },
+  {
+    "objectID": "posts/Day2.html#포트-확인하고-죽이기",
+    "href": "posts/Day2.html#포트-확인하고-죽이기",
+    "title": "나의 블로그 만들기 도전기 Day2",
+    "section": "4. 포트 확인하고 죽이기",
+    "text": "4. 포트 확인하고 죽이기\n\n1. 포트 확인\napt-get install lsof\napt install lsof\nlsof -i :23052   # 1번 방법(해당 포트를 사용하고 있는지 확인)\n\nps aux | grep jupyter # 2번 방법(쓰고 있는 모든 포트를 확인)\n\n\n2. 포트 죽이기\nkill 862165\n- 앞으로 마크다운 수식과 문법 정리, 블로그 꾸미기 등등 여러가지를 해보자"
   },
   {
     "objectID": "posts/test2.html",
