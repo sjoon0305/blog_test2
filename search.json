@@ -46,7 +46,7 @@
     "href": "posts/Day1.html#터미널에서-각종-프로그램-다운로드",
     "title": "나의 블로그 만들기 도전기 Day1",
     "section": "6. 터미널에서 각종 프로그램 다운로드",
-    "text": "6. 터미널에서 각종 프로그램 다운로드\n- git 다운로드\napt-get install git\n- quarto 다운로드\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.533/quarto-1.4.533-linux-amd64.deb\n- anaconda 다운로드\nwget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh\nbash Anaconda3-2023.09-0-Linux-x86_64.sh\n- git 삭제\nls gi* # gi로 시작하는 파일 보기, 초록은 실행 파일\napt-get remove git"
+    "text": "6. 터미널에서 각종 프로그램 다운로드\n- git 다운로드\napt-get install git\n- quarto 다운로드\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.533/quarto-1.4.533-linux-amd64.deb\ndpkg -i quarto-1.4.533-linux-amd64.deb\n- anaconda 다운로드\nwget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh\nbash Anaconda3-2023.09-0-Linux-x86_64.sh\n- git 삭제\nls gi* # gi로 시작하는 파일 보기, 초록은 실행 파일\napt-get remove git"
   },
   {
     "objectID": "posts/Day2.html",
@@ -84,17 +84,10 @@
     "text": "4. 포트 확인하고 죽이기\n\n1. 포트 확인\napt-get install lsof\napt install lsof\nlsof -i :23052   # 1번 방법(해당 포트를 사용하고 있는지 확인)\n\nps aux | grep jupyter # 2번 방법(쓰고 있는 모든 포트를 확인)\n\n\n2. 포트 죽이기\nkill 862165\n- 앞으로 마크다운 수식과 문법 정리, 블로그 꾸미기 등등 여러가지를 해보자"
   },
   {
-    "objectID": "posts/test2.html",
-    "href": "posts/test2.html",
-    "title": "Test",
-    "section": "",
-    "text": "‘-’ 공부해보자, gisuk gonbu"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "목차",
     "section": "",
-    "text": "나의 블로그 만들기 도전기 Day2\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 9, 2024\n\n\n유성준\n\n\n\n\n\n\n\n\n\n\n\n\nTest\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 5, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\n나의 블로그 만들기 도전기 Day1\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\n유성준\n\n\n\n\n\n\nNo matching items"
+    "text": "나의 블로그 만들기 도전기 Day2\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 9, 2024\n\n\n유성준\n\n\n\n\n\n\n\n\n\n\n\n\n나의 블로그 만들기 도전기 Day1\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\nJan 3, 2024\n\n\n유성준\n\n\n\n\n\n\nNo matching items"
   }
 ]
